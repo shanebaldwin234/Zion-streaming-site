@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Vault — Zion Streaming</title>
+<meta name="description" content="The Zion Vault — gated documents and resources for Zion Streaming viewers.">
+<meta property="og:title" content="The Vault — Zion Streaming">
+<meta property="og:description" content="Gated documents and resources for Zion Streaming viewers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.zionstreaming.com/vault/">
+<meta property="og:image" content="https://www.zionstreaming.com/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.zionstreaming.com/images/og-image.png">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="atmo atmo--1" aria-hidden="true"></div>
+<div class="atmo atmo--2" aria-hidden="true"></div>
+<div class="atmo atmo--3" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead__inner">
+    <div class="masthead__left">
+      <a href="mailto:Info@zionstreaming.com">Info@zionstreaming.com</a>
+    </div>
+    <a href="/" class="masthead__logo" aria-label="Zion Streaming home">
+      <img src="/images/zion-streaming-logo.png" alt="Zion Streaming">
+    </a>
+    <div class="masthead__right">
+      <nav class="nav" id="nav">
+        <a href="/about/">About</a>
+        <a href="/vault/">The Vault</a>
+        <a href="https://www.oraqelcode.com">Oraqel Code</a>
+        <a href="https://www.theziongathering.com">Gatherings</a>
+        <a href="https://liveinvirtue.com">LiV</a>
+        <a href="/contact/">Contact</a>
+        <a href="https://zion-media.mykajabi.com/offers/73d5Sxf2/checkout" class="nav__cta">Donate</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav" onclick="document.getElementById('nav').classList.toggle('open'); this.setAttribute('aria-expanded', document.getElementById('nav').classList.contains('open'));">Menu</button>
+    </div>
+  </div>
+</header>
+
+<!-- LOCK SCREEN -->
+<section class="vault-page" id="lock-screen">
+  <div class="vault__lock">
+    <div class="vault__icon">🔒</div>
+    <h1 class="vault__title">The Vault</h1>
+    <p class="vault__sub">Enter the 4-digit access code to view the archive.</p>
+    <input
+      type="text"
+      class="vault__input"
+      id="code-input"
+      inputmode="numeric"
+      pattern="[0-9]*"
+      maxlength="4"
+      placeholder="••••"
+      autocomplete="off"
+      autofocus
+    >
+    <button class="vault__btn" onclick="checkVaultCode()">Unlock</button>
+    <p class="vault__error" id="error-msg"></p>
+  </div>
+</section>
+
+<!-- VAULT CONTENT (revealed on correct code) -->
+<section class="vault__content" id="vault-content">
+  <div class="container">
+
+    <div class="vault__hero">
+      <h1 class="vault__title">The Vault</h1>
+      <p>Documents, research, and study materials curated for the remnant. Bookmark this page — new additions land here as we publish them.</p>
+    </div>
+
+    <div class="vault__grid">
+
+      <article class="vault__doc">
+        <p class="vault__doc__type">Coming Soon</p>
+        <h3>Document Title</h3>
+        <p>Document descriptions and download links will appear here. Replace this placeholder with real entries as you publish.</p>
+        <a href="#">Open →</a>
+      </article>
+
+      <article class="vault__doc">
+        <p class="vault__doc__type">Coming Soon</p>
+        <h3>Document Title</h3>
+        <p>Document descriptions and download links will appear here.</p>
+        <a href="#">Open →</a>
+      </article>
+
+      <article class="vault__doc">
+        <p class="vault__doc__type">Coming Soon</p>
+        <h3>Document Title</h3>
+        <p>Document descriptions and download links will appear here.</p>
+        <a href="#">Open →</a>
+      </article>
+
+      <article class="vault__doc">
+        <p class="vault__doc__type">Coming Soon</p>
+        <h3>Document Title</h3>
+        <p>Document descriptions and download links will appear here.</p>
+        <a href="#">Open →</a>
+      </article>
+
+    </div>
+
+    <button class="vault__lockout" onclick="lockVault()">Lock the Vault</button>
+  </div>
+</section>
+
+<!-- THE WATCHMEN -->
+<section class="watchmen">
+  <div class="container">
+    <p class="watchmen__label">The Watchmen</p>
+    <h2 class="watchmen__title">Zion Media</h2>
+    <img src="/images/team-photo.png" alt="The Zion Streaming hosts" class="watchmen__photo">
+    <div class="watchmen__names">
+      <span>Shane Baldwin</span>
+      <span>Latter-Day Chad</span>
+      <span>Greg McIver</span>
+      <span>David Douglas</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="mark"><img src="/images/zion-streaming-logo.png" alt="Zion Streaming"></div>
+        <p>Exploring spirit. Defending truth. Amplifying light. Made for the gathering.</p>
+      </div>
+
+      <div class="footer__col">
+        <h6>Explore</h6>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/vault/">The Vault</a></li>
+          <li><a href="/shows/">Shows</a></li>
+          <li><a href="https://www.theziongathering.com">Gatherings</a></li>
+          <li><a href="/resources/">Resources</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h6>Watch &amp; listen</h6>
+        <ul>
+          <li><a href="https://www.youtube.com/@ZionMedia_">YouTube</a></li>
+          <li><a href="https://podcasts.apple.com/us/podcast/zion-media/id1817265894">Apple Podcasts</a></li>
+          <li><a href="https://open.spotify.com/show/1yGg83HdSmHNABPeVVvT4j">Spotify</a></li>
+          <li><a href="https://discord.com/invite/dgn2CZMvFn">Discord</a></li>
+          <li><a href="https://zionstreaming.printify.me/">Merch</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h6>Sister works</h6>
+        <ul>
+          <li><a href="https://liveinvirtue.com">LiV Restoration</a></li>
+          <li><a href="https://www.oraqelcode.com">Oraqel Code</a></li>
+          <li><a href="https://www.theziongathering.com">The Zion Gathering</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div>© 2026 Zion Streaming · All rights reserved</div>
+      <div class="footer__social">
+        <a href="https://www.youtube.com/@ZionMedia_" aria-label="YouTube">YouTube</a>
+        <a href="https://www.instagram.com/zionstreaming/" aria-label="Instagram">Instagram</a>
+        <a href="https://x.com/zionstreaming" aria-label="X / Twitter">X</a>
+        <a href="https://www.tiktok.com/@zionstreaming" aria-label="TikTok">TikTok</a>
+        <a href="https://discord.com/invite/dgn2CZMvFn" aria-label="Discord">Discord</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  // Vault unlock logic — light gating, not real security
+  const VAULT_CODE = '3333';
+
+  function unlockVault() {
+    document.getElementById('lock-screen').style.display = 'none';
+    document.getElementById('vault-content').classList.add('unlocked');
+  }
+
+  function lockVault() {
+    sessionStorage.removeItem('vault-unlocked');
+    document.getElementById('lock-screen').style.display = 'flex';
+    document.getElementById('vault-content').classList.remove('unlocked');
+    document.getElementById('code-input').value = '';
+    document.getElementById('error-msg').textContent = '';
+    document.getElementById('code-input').focus();
+  }
+
+  function checkVaultCode() {
+    const input = document.getElementById('code-input');
+    const err = document.getElementById('error-msg');
+    if (input.value === VAULT_CODE) {
+      sessionStorage.setItem('vault-unlocked', '1');
+      err.textContent = '';
+      unlockVault();
+    } else {
+      err.textContent = 'Incorrect code. Try again.';
+      input.value = '';
+      input.focus();
+    }
+  }
+
+  // Submit on Enter
+  document.getElementById('code-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') checkVaultCode();
+  });
+
+  // Auto-submit when 4 digits entered
+  document.getElementById('code-input').addEventListener('input', e => {
+    // Strip non-digits
+    e.target.value = e.target.value.replace(/[^0-9]/g, '');
+    if (e.target.value.length === 4) {
+      setTimeout(checkVaultCode, 80);
+    }
+  });
+
+  // Stay unlocked for the session if already verified
+  if (sessionStorage.getItem('vault-unlocked') === '1') {
+    unlockVault();
+  }
+</script>
+
+</body>
+</html>
