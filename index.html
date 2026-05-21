@@ -113,24 +113,24 @@
     </div>
 
     <div class="featured">
-      <a href="https://www.youtube.com/@ZionMedia_" class="featured__visual" aria-label="Watch on YouTube">
-        <img src="https://img.youtube.com/vi/dO-pHQSymZU/maxresdefault.jpg" alt="Latest Zion Media episode thumbnail">
+      <div class="featured__visual" data-video-id="UzKVcelkb8I" role="button" tabindex="0" aria-label="Play episode">
+        <img src="https://img.youtube.com/vi/UzKVcelkb8I/maxresdefault.jpg" alt="Latest Zion Media episode thumbnail">
         <div class="play">
           <span class="play__btn" aria-hidden="true"></span>
         </div>
         <span class="badge">New</span>
-      </a>
+      </div>
 
       <div class="featured__meta">
-        <div class="featured__category">Book of the Servant · Ch. 1</div>
-        <h3 class="featured__title">The Step Between Confirmation and Exaltation That Nobody Taught You.</h3>
+        <div class="featured__category">Jesus in Britain · Episode 1</div>
+        <h3 class="featured__title">Why does your patriarchal blessing say Ephraim? Is the answer in Scotland?</h3>
         <p class="featured__desc">
-          A verse-by-verse revelation on the baptism of fire and the baptism of the Holy Ghost — and why the distinction matters now more than ever. The Lord draws a clear line. We follow it.
+          With researchers Bron and Ben Kimball, we trace the lost legacy of Gathelus and Scota — an Egyptian princess and her Greek husband — through ancient texts that predate the Book of Mormon but echo its patterns. Five named bridges from Pharaoh's court to the Cornwall coast where Jesus is said to have walked.
         </p>
         <div class="featured__row">
           <span>Watch</span>
           <span class="dot"></span>
-          <span>54 min</span>
+          <span>1 hr 22 min</span>
           <span class="dot"></span>
           <span>Hosted by Shane Baldwin</span>
         </div>
@@ -374,7 +374,7 @@
           <li><a href="https://www.youtube.com/@ZionMedia_">YouTube</a></li>
           <li><a href="https://podcasts.apple.com/us/podcast/zion-media/id1817265894">Apple Podcasts</a></li>
           <li><a href="https://open.spotify.com/show/1yGg83HdSmHNABPeVVvT4j">Spotify</a></li>
-          <li><a href="https://discord.com/invite/dgn2CZMvFn">Discord</a></li>
+          <li><a href="https://discord.com/invite/e9yVQjNVRW">Discord</a></li>
           <li><a href="https://zionstreaming.printify.me/">Merch</a></li>
         </ul>
       </div>
@@ -396,7 +396,7 @@
         <a href="https://www.instagram.com/zionstreaming/" aria-label="Instagram">Instagram</a>
         <a href="https://x.com/zionstreaming" aria-label="X / Twitter">X</a>
         <a href="https://www.tiktok.com/@zionstreaming" aria-label="TikTok">TikTok</a>
-        <a href="https://discord.com/invite/dgn2CZMvFn" aria-label="Discord">Discord</a>
+        <a href="https://discord.com/invite/e9yVQjNVRW" aria-label="Discord">Discord</a>
       </div>
       <div>
         <a href="/privacy-policy.html">Privacy</a> · <a href="/terms-conditions.html">Terms</a>
@@ -412,6 +412,23 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+<script>
+  // Latest dispatch: click thumbnail → swap to embedded YouTube player (lazy load)
+  document.querySelectorAll('.featured__visual[data-video-id]').forEach(el => {
+    const play = () => {
+      const id = el.dataset.videoId;
+      el.innerHTML = '<iframe src="https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+      el.classList.add('featured__visual--playing');
+      el.style.cursor = 'default';
+    };
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', play);
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); }
+    });
+  });
 </script>
 
 </body>
