@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/333",
+      "destination": "https://zion-streaming-web-preview.vercel.app/333"
+    },
+    {
+      "source": "/333/:path*",
+      "destination": "https://zion-streaming-web-preview.vercel.app/333/:path*"
+    }
+  ]
+}
