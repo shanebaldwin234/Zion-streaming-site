@@ -1273,31 +1273,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   color: var(--text-mute);
 }
 
-.spotlight-card__meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 17px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-mute);
-  font-weight: 600;
-  padding-top: 16px;
-  border-top: var(--rule);
-}
-
-.spotlight-card__meta .arrow {
-  font-size: 18px;
-  transition: transform 0.25s ease, color 0.25s ease;
-  color: var(--text);
-}
-
-.spotlight-card:hover .spotlight-card__meta .arrow {
-  transform: translateX(6px);
-  color: var(--blue);
-}
-
-/* Full-width partner card with product image (Astradust) */
+/* Partner card: media left, copy + buttons right */
 
 .spotlight-card--feature {
   grid-column: 1 / -1;
@@ -1327,13 +1303,13 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   min-width: 0;
 }
 
-.spotlight-card--app .spotlight-card__media {
+.spotlight-card--logo .spotlight-card__media {
   width: 100%;
   max-width: 400px;
   justify-self: center;
 }
 
-.spotlight-card--app:hover { transform: none; }
+.spotlight-card--feature:hover { transform: none; }
 
 .spotlight-card__actions {
   display: flex;
@@ -1356,7 +1332,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 
 @media (max-width: 900px) {
   .spotlight-card--feature { grid-template-columns: 1fr; }
-  .spotlight-card--app .spotlight-card__media { max-width: 240px; }
+  .spotlight-card--logo .spotlight-card__media { max-width: 240px; }
   .spotlight-card__actions .btn { width: 100%; justify-content: center; padding: 16px 20px; }
 }
 
