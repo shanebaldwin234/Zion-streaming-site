@@ -362,6 +362,12 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   color: var(--text);
 }
 
+/* Full nav no longer fits beside the email; drop the email so the logo keeps its size */
+@media (max-width: 1099px) {
+  .masthead__inner { grid-template-columns: auto 1fr auto; }
+  .masthead__left { display: none; }
+}
+
 @media (max-width: 900px) {
   .masthead__inner { grid-template-columns: auto 1fr auto; }
   .masthead__left { display: none; }
