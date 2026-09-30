@@ -40,7 +40,7 @@
   --max:          1400px;
   --reading:      720px;
   --gutter:       clamp(20px, 4vw, 56px);
-  --section-y:    clamp(80px, 10vw, 160px);
+  --section-y:    clamp(52px, 5.5vw, 84px);
 
   /* Borders */
   --rule:         1px solid var(--border);
@@ -417,8 +417,8 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   align-items: baseline;
   justify-content: space-between;
   gap: 24px;
-  padding-bottom: 28px;
-  margin-bottom: 56px;
+  padding-bottom: 20px;
+  margin-bottom: 36px;
   border-bottom: var(--rule);
   flex-wrap: wrap;
 }
@@ -956,7 +956,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   display: flex;
   flex-direction: column;
   gap: 18px;
-  min-height: 380px;
+  min-height: 300px;
   transition: background 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -983,7 +983,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 }
 
 @media (max-width: 560px) {
-  .show-card { border-right: 0; }
+  .show-card { border-right: 0; min-height: 0; }
   .show-card:not(:last-child) { border-bottom: var(--rule); }
 }
 
@@ -1052,7 +1052,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
    ============================================================ */
 
 .gathering {
-  padding: clamp(80px, 10vw, 160px) 0;
+  padding: var(--section-y) 0;
   position: relative;
   overflow: hidden;
   border-top: var(--rule);
@@ -1171,8 +1171,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 .spotlight {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 28px;
-  margin-bottom: 56px;
+  gap: 24px;
 }
 
 @media (max-width: 900px) { .spotlight { gap: 20px; } }
@@ -1522,7 +1521,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 .footer {
   background: var(--bg-soft);
   color: var(--text);
-  padding: clamp(60px, 8vw, 100px) 0 32px;
+  padding: clamp(44px, 5vw, 72px) 0 32px;
   border-top: var(--rule);
   position: relative;
   overflow: hidden;
