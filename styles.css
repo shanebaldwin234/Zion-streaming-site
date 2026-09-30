@@ -1158,12 +1158,12 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 
 .spotlight {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 28px;
   margin-bottom: 56px;
 }
 
-@media (max-width: 900px) { .spotlight { grid-template-columns: 1fr; gap: 20px; } }
+@media (max-width: 900px) { .spotlight { gap: 20px; } }
 
 .spotlight-card {
   border: 1px solid var(--border);
@@ -1324,10 +1324,40 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   display: flex;
   flex-direction: column;
   gap: 20px;
+  min-width: 0;
+}
+
+.spotlight-card--app .spotlight-card__media {
+  width: 100%;
+  max-width: 400px;
+  justify-self: center;
+}
+
+.spotlight-card--app:hover { transform: none; }
+
+.spotlight-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: var(--rule);
+}
+
+.spotlight-card__actions .btn {
+  font-size: 17px;
+  letter-spacing: 0.1em;
+  padding: 16px 26px;
+}
+
+.spotlight-card__actions .btn--ghost {
+  text-transform: none;
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 900px) {
   .spotlight-card--feature { grid-template-columns: 1fr; }
+  .spotlight-card--app .spotlight-card__media { max-width: 240px; }
+  .spotlight-card__actions .btn { width: 100%; justify-content: center; padding: 16px 20px; }
 }
 
 /* Additional partners row */
