@@ -1214,9 +1214,9 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 
 .spotlight-card__num {
   font-family: var(--body);
-  font-size: 11px;
+  font-size: 17px;
   font-weight: 700;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   background: var(--grad);
   -webkit-background-clip: text;
@@ -1238,25 +1238,47 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 .spotlight-card__tagline {
   font-family: var(--body);
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--text);
   line-height: 1.35;
   letter-spacing: -0.005em;
 }
 
 .spotlight-card__desc {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
   color: var(--text-mute);
-  max-width: 460px;
+  max-width: 520px;
+}
+
+.spotlight-card__code {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.spotlight-card__code strong {
+  display: inline-block;
+  padding: 0 10px;
+  border: 1px dashed var(--blue);
+  border-radius: 6px;
+  color: var(--blue-bright);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.spotlight-card__note {
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text-mute);
 }
 
 .spotlight-card__meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 11px;
-  letter-spacing: 0.22em;
+  font-size: 17px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-mute);
   font-weight: 600;
@@ -1273,6 +1295,39 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 .spotlight-card:hover .spotlight-card__meta .arrow {
   transform: translateX(6px);
   color: var(--blue);
+}
+
+/* Full-width partner card with product image (Astradust) */
+
+.spotlight-card--feature {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(32px, 4vw, 56px);
+  align-items: stretch;
+}
+
+.spotlight-card__media {
+  display: block;
+  align-self: center;
+}
+
+.spotlight-card__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: var(--rule);
+}
+
+.spotlight-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .spotlight-card--feature { grid-template-columns: 1fr; }
 }
 
 /* Additional partners row */
