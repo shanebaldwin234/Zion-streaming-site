@@ -72,16 +72,16 @@
 
       <div class="hero__meta">
         <div class="stat">
-          <div class="stat__num">20.1K</div>
+          <div class="stat__num">19K<span style="font-size:0.6em;opacity:0.6">+</span></div>
           <div class="stat__label">Subscribers on YouTube</div>
         </div>
         <div class="stat">
-          <div class="stat__num">4M<span style="font-size:0.6em;opacity:0.6">+</span></div>
+          <div class="stat__num">5M<span style="font-size:0.6em;opacity:0.6">+</span></div>
           <div class="stat__label">Lifetime views</div>
         </div>
         <div class="stat">
-          <div class="stat__num">III</div>
-          <div class="stat__label">Active podcast lines</div>
+          <div class="stat__num">1,200<span style="font-size:0.6em;opacity:0.6">+</span></div>
+          <div class="stat__label">Videos published</div>
         </div>
       </div>
     </div>
@@ -89,9 +89,9 @@
     <div class="hero__ctas">
       <div class="next-up">
         <span class="dot"></span>
-        Next gathering — Sons of Levi, Bear Lake, ID · Oct 22–25
+        <span data-ng="line">Next gathering — Sons of Levi, Bear Lake, ID · Oct 22–25</span>
       </div>
-      <a href="https://www.theziongathering.com/g/sons-of-levi-bear-lake-2026" class="btn">
+      <a href="https://www.theziongathering.com/g/sons-of-levi-bear-lake-2026" class="btn" data-ng="link">
         Join the Gathering <span class="arrow"></span>
       </a>
       <a href="https://www.youtube.com/@ZionMedia_" class="btn btn--ghost">
@@ -258,25 +258,25 @@
 
     <div>
       <div class="gathering__eyebrow">§ 03 — Upcoming gathering</div>
-      <h2 class="gathering__title">
+      <h2 class="gathering__title" data-ng="title">
         Sons of Levi.<br>
         <em>Oct 22–25.</em>
       </h2>
     </div>
 
     <div class="gathering__detail">
-      <p class="gathering__copy">
+      <p class="gathering__copy" data-ng="copy">
         A retreat for men seeking refining, sanctification, and priesthood power — three days of scripture, priesthood instruction, and brotherhood at The Monster Mansion on Bear Lake. Come on your own, with a friend or brother, or as a father and son.
       </p>
 
-      <dl class="gathering__rows">
+      <dl class="gathering__rows" data-ng="rows">
         <div class="gathering__row"><dt>When</dt><dd>Thursday Oct 22 — Sunday Oct 25, 2026</dd></div>
         <div class="gathering__row"><dt>Where</dt><dd>The Monster Mansion, Bear Lake, ID</dd></div>
         <div class="gathering__row"><dt>Who</dt><dd>Men of every age · all inclusive</dd></div>
         <div class="gathering__row"><dt>Price</dt><dd>$599 per person · spots are limited</dd></div>
       </dl>
 
-      <a href="https://www.theziongathering.com/g/sons-of-levi-bear-lake-2026" class="btn">
+      <a href="https://www.theziongathering.com/g/sons-of-levi-bear-lake-2026" class="btn" data-ng="link">
         Reserve your place <span class="arrow"></span>
       </a>
     </div>
@@ -305,10 +305,13 @@
           If you have ears to hear — welcome.
         </p>
 
-        <div class="manifesto__sig">
-          <span class="line"></span>
-          <span>Shane Baldwin, Latter-Day Chad, Greg McIver, David Douglas</span>
-        </div>
+        <figure class="manifesto__team">
+          <img src="/images/team-photo.png" width="1280" height="720" loading="lazy" decoding="async" alt="The Zion Media hosts: Shane Baldwin, Latter-Day Chad, Greg McIver, and David Douglas">
+          <figcaption class="manifesto__sig">
+            <span class="line"></span>
+            <span>Shane Baldwin, Latter-Day Chad, Greg McIver, David Douglas</span>
+          </figcaption>
+        </figure>
       </div>
     </div>
 
@@ -330,6 +333,7 @@
   <div class="shows">
 
     <a href="/shows/#watchmens-cry" class="show-card">
+      <div class="show-card__art"><img src="https://img.youtube.com/vi/dO-pHQSymZU/mqdefault.jpg" srcset="https://img.youtube.com/vi/dO-pHQSymZU/mqdefault.jpg 320w, https://img.youtube.com/vi/dO-pHQSymZU/maxresdefault.jpg 1280w" sizes="(max-width: 560px) 92vw, (max-width: 1199px) 46vw, 25vw" width="320" height="180" loading="lazy" decoding="async" alt="The Watchmen's Cry episode thumbnail"></div>
       <div class="show-card__num">i. — Flagship</div>
       <h3 class="show-card__title">The Watchmen's Cry</h3>
       <p class="show-card__desc">A show about the last days. Prophecy, signs of the times, and the work of the watchmen on the wall.</p>
@@ -337,6 +341,7 @@
     </a>
 
     <a href="/shows/#isaiah-revealed" class="show-card">
+      <div class="show-card__art"><img src="https://img.youtube.com/vi/GIK8KnRLnqQ/mqdefault.jpg" srcset="https://img.youtube.com/vi/GIK8KnRLnqQ/mqdefault.jpg 320w, https://img.youtube.com/vi/GIK8KnRLnqQ/maxresdefault.jpg 1280w" sizes="(max-width: 560px) 92vw, (max-width: 1199px) 46vw, 25vw" width="320" height="180" loading="lazy" decoding="async" alt="Isaiah Revealed episode thumbnail"></div>
       <div class="show-card__num">ii. — Scripture</div>
       <h3 class="show-card__title">Isaiah Revealed</h3>
       <p class="show-card__desc">Verse-by-verse unsealings of Isaiah and the prophets — the work of decoding what was always there.</p>
@@ -344,6 +349,7 @@
     </a>
 
     <a href="/shows/#unsealed" class="show-card">
+      <div class="show-card__art"><img src="https://img.youtube.com/vi/VoLhTxMo7RU/mqdefault.jpg" srcset="https://img.youtube.com/vi/VoLhTxMo7RU/mqdefault.jpg 320w, https://img.youtube.com/vi/VoLhTxMo7RU/maxresdefault.jpg 1280w" sizes="(max-width: 560px) 92vw, (max-width: 1199px) 46vw, 25vw" width="320" height="180" loading="lazy" decoding="async" alt="Unsealed episode thumbnail"></div>
       <div class="show-card__num">iii. — Doctrine</div>
       <h3 class="show-card__title">Unsealed</h3>
       <p class="show-card__desc">The doctrines that were hidden in plain sight. Three-tier Godhead, the Servant, and the architecture of the celestial path.</p>
@@ -351,6 +357,7 @@
     </a>
 
     <a href="/shows/#documentaries" class="show-card">
+      <div class="show-card__art show-card__art--type" aria-hidden="true"><span>Restoration</span><span class="grad-text">Decoded.</span></div>
       <div class="show-card__num">iv. — New</div>
       <h3 class="show-card__title">Restoration Decoded</h3>
       <p class="show-card__desc">Zion Streaming Documentaries — long-form, cinematic deep-dives. Modeled on the best of the form, built for the Restoration.</p>
@@ -403,19 +410,6 @@
 
 <!-- FOOTER -->
 <!-- THE WATCHMEN -->
-<section class="watchmen">
-  <div class="container">
-    <p class="watchmen__label">The Watchmen</p>
-    <h2 class="watchmen__title">Zion Media</h2>
-    <img src="/images/team-photo.png" alt="The Zion Streaming hosts" class="watchmen__photo">
-    <div class="watchmen__names">
-      <span>Shane Baldwin</span>
-      <span>Latter-Day Chad</span>
-      <span>Greg McIver</span>
-      <span>David Douglas</span>
-    </div>
-  </div>
-</section>
 
 <footer class="footer">
   <div class="footer__inner">
@@ -503,5 +497,6 @@
   });
 </script>
 
+<script src="/next-gathering.js" defer></script>
 </body>
 </html>
